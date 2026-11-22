@@ -2,9 +2,6 @@ name: Build Football Lab APK
 on:
   push:
     branches: [football-lab-apk]
-    paths:
-      - 'FootballLabAndroid/**'
-      - '.github/workflows/android-apk.yml'
   workflow_dispatch:
 permissions:
   contents: read
