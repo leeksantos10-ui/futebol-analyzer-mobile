@@ -8,13 +8,13 @@ import android.os.Bundle
 import android.os.Build
 import android.os.Environment
 import android.provider.Settings
-import androidx.activity.ComponentActivity
+import androidx.activity.ComponentActivity\nimport androidx.activity.compose.rememberLauncherForActivityResult\nimport androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.compose.setContent
 import androidx.core.content.FileProvider
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
+import androidx.compose.material3.*\nimport androidx.compose.foundation.text.KeyboardOptions\nimport androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -63,7 +63,7 @@ fun FootballLabApp() {
                 Spacer(Modifier.height(24.dp))
                 when(tab) {
                     "Início" -> HomeScreen()
-                    "Jogos" -> PlaceholderScreen("Jogos", "Seu histórico de partidas ficará armazenado localmente.")
+                    "Jogos" -> GamesScreen()
                     "Métricas" -> PlaceholderScreen("Métricas", "Crie e gerencie suas próprias métricas.")
                     "Filtros" -> PlaceholderScreen("Filtros", "Combine métricas para montar estratégias.")
                     "Backtest" -> PlaceholderScreen("Backtest", "Teste estratégias no histórico e investigue os resultados.")
